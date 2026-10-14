@@ -1,0 +1,54 @@
+# 真实密钥与环境配置绝不入库（示例模板 keys.example.json / .env.example 除外）
+keys.json
+.env
+.env.*
+!.env.example
+
+# 维护者本地 AI 记忆与私有笔记（非项目规范，不随仓库发布）
+memory.md
+
+# 历史遗留的本地产物（已废弃机制的缓存文件，防旧版本误提交）
+engine-state.json
+
+# 依赖与构建产物
+node_modules/
+dist/
+out/
+*.tgz
+
+# 证书与私钥（纵深防御：本项目不应出现，但拒绝一切此类文件）
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+id_rsa
+id_dsa
+*.kdbx
+
+# 日志、测试产物与本地数据
+logs/
+*.log
+npm-debug.log*
+coverage/
+.nyc_output/
+*.sqlite
+*.sqlite3
+*.db
+
+# 临时文件
+.tmp-*
+*.tmp
+
+# 编辑器与操作系统
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini

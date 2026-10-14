@@ -1,0 +1,18 @@
+{
+  "name": "smart-search",
+  "version": "2.0.0",
+  "description": "Smart aggregated search MCP server: scene-based dual-engine concurrent commercial search (Exa/Firecrawl/Tavily/Brave) with quota-aware cooldown and key-free DDG/Bing fallback.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/test/verify.mjs offline",
+    "verify:free": "node scripts/test/verify.mjs free",
+    "verify:commercial": "node scripts/test/verify.mjs commercial"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1"
+  }
+}

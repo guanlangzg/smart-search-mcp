@@ -1,0 +1,6 @@
+{
+  "exa": "YOUR_EXA_API_KEY_HERE",
+  "tavily": "YOUR_TAVILY_API_KEY_HERE",
+  "brave": "YOUR_BRAVE_API_KEY_HERE",
+  "firecrawl": "YOUR_FIRECRAWL_API_KEY_HERE"
+}
