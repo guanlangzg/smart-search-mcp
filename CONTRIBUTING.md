@@ -54,7 +54,14 @@ node scripts/test/verify.mjs commercial  # 商业双引擎端到端冒烟（消�
 ## 安全要求
 
 - 真实密钥只写入 `keys.json` 或环境变量，两者均被 `.gitignore` 覆盖；示例文件（`keys.example.json`、`.env.example`、文档）只允许 `YOUR_*` 式占位符；
-- 提交前自查：搜索 `tvly-`、`BSA`、`fc-`、`exa-`、`AIza` 等前缀后跟 20+ 位随机串的内容；
+- **提交前自查**（扫描工作树 + git 历史，检测凭据/内网IP/家目录/PII）：
+
+  ```bash
+  node scripts/security-audit.mjs          # 全部（工作树 + 历史 blob）
+  node scripts/security-audit.mjs worktree # 仅工作树（快速预提交检查）
+  ```
+
+  该脚本命中值仅脱敏显示，发现泄露按提示流程处理（先吊销再清理）；
 - 发现密钥泄露请**立即在对应控制台吊销**并开 issue 标记，不要仅在 PR 中删除（git 历史仍会保留）。
 
 ## 提交规范
